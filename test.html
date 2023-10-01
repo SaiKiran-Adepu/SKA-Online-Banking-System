@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Web Page</h2>
+<p>My First Paragraph.</p>
+<form>
+<textarea id="demo1">
+</textarea>
+</form>
+<script>
+window.onload = function () {
+        DisplayCurrentTime();
+    };
+	
+    function DisplayCurrentTime() {
+	setInterval(() => {
+	let date = new Date();
+var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+
+// This arrangement can be altered based on how we want the date's format to appear.
+let d1 = `${day}-${month}-${year}`;
+console.log(d1); // "17-6-2022"
+   
+ document.getElementById("demo1").innerHTML = current_time+" "+d1;     
+	  }, 100);
+    }; 
+
+//document.getElementById("demo").innerHTML = 5 + 6;
+</script>
+
+</body>
+</html> 
